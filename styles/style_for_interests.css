@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    padding: 30px 20px;
+    background-color: #caeba0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #222;
+    line-height: 1.6;
+}
+
+.header-container {
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    background-color: #5bc5e0;
+    color: #ffffff;
+    padding: 20px;
+    margin: 0 0 20px;
+    border-radius: 12px;
+    font-size: 32px;
+}
+
+h2 {
+    width: fit-content;
+    margin: 0 auto 20px;
+    padding: 10px 30px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+h3 {
+    background-color: #5bc5e0;
+    color: wheat;
+    border-radius: 10px;
+}
+
+h1, h2, h3, section, footer {
+  border: 1px solid #020202;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #ffffff;
+    color: #0066cc;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    border: 1px solid #020202;
+}
+
+nav a:hover,
+nav a.active {
+    background-color: #0066cc;
+    color: #ffffff;
+}
+
+img {
+    height: 250px; 
+    object-fit: cover;
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid #020202;      
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto 20px;
+}
+
+.interests {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 300px;
+    width: 100%; 
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.interests p {
+    margin-top: auto;
+    font-weight: bold;
+}
+
+.wrapper-photos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 740px;
+    margin: 0 auto 20px;
+}
+
+.photos {
+    display: flex;
+    flex-direction: column;
+    max-width: 300px; 
+    width: 100%;     
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.photos p {
+    margin-top: auto;
+    font-weight: bold;
+}
+
+.important-block {
+    max-width: 500px; 
+    width: 100%;     
+    padding: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 auto 20px;
+}
+
+.important-block p {
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    color: #555;
+}

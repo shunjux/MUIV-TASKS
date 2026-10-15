@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="./styles/style_for_auth.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Регистрация</h1>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Введите данные</h2>
+
+            <form action="./main.html" method="get" class="qwerty">
+                <label for="name">Имя</label>
+                <input type="text" name="name" id="name" placeholder="Введите имя" required>
+
+                <label for="email">Почта</label>
+                <input type="email" name="email" id="email" placeholder="name@example.com" required>
+
+                <label for="password">Пароль</label>
+                <input type="password" name="password" idя="password" placeholder="Придумайте пароль" required minlength="6">
+
+                <label for="message">Сообщение</label>
+                    <textarea name="message" id="message" placeholder="Введите ваши увлечения, интересы"></textarea>
+
+                <label for="age">Возраст</label>
+                <select name="age" id="age" >
+
+                    <option value="0/18">0-18</option>
+                    <option value="18/25">18-25</option>
+                    <option value="25">25+</option>
+                </select>
+                
+                <button type="submit" class="button green">Отправить</button>
+
+            </form>
+
+        </section>
+
+
+
+    </main>
+    
+<footer>
+    Конец моего сайта-визитки<br>
+    Контакты: Telegram @whatsupcookie
+</footer>
+    
+</body>
+</html>
