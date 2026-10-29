@@ -1,3 +1,5 @@
+* { box-sizing: border-box; }
+
 body {
     margin: 0;
     padding: 30px 20px;
@@ -6,6 +8,9 @@ body {
     font-size: 16px;
     color: #222;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .header-container {
@@ -22,6 +27,7 @@ h1 {
     margin: 0 0 20px;
     border-radius: 12px;
     font-size: 32px;
+    border: 1px solid #020202;
 }
 
 h2 {
@@ -31,22 +37,21 @@ h2 {
     text-align: center;
     background-color: #fff;
     border-radius: 15px;
+    border: 1px solid #020202;
 }
 
 h3 {
     background-color: #5bc5e0;
     color: wheat;
     border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #020202;
 }
-
-h1, h2, h3, section, footer {
-  border: 1px solid #020202;
-}
-
 
 nav {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
     margin-bottom: 30px;
 }
@@ -62,8 +67,7 @@ nav a {
     border: 1px solid #020202;
 }
 
-nav a:hover,
-nav a.active {
+nav a:hover, nav a.active {
     background-color: #0066cc;
     color: #ffffff;
 }
@@ -76,7 +80,7 @@ img {
     border: 2px solid #020202;      
 }
 
-.wrapper {
+.wrapper, .wrapper-photos {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -86,43 +90,21 @@ img {
     margin: 0 auto 20px;
 }
 
-.interests {
+.wrapper-photos { max-width: 740px; }
+
+.interests, .photos {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     max-width: 300px;
     width: 100%; 
     padding: 15px;
     background-color: #fff;
     border-radius: 10px;
     text-align: center;
+    border: 1px solid #020202;
 }
 
-.interests p {
-    margin-top: auto;
-    font-weight: bold;
-}
-
-.wrapper-photos {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 20px;
-    max-width: 740px;
-    margin: 0 auto 20px;
-}
-
-.photos {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px; 
-    width: 100%;     
-    padding: 15px;
-    background-color: #fff;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.photos p {
+.interests p, .photos p {
     margin-top: auto;
     font-weight: bold;
 }
@@ -135,10 +117,7 @@ img {
     border-radius: 10px;
     text-align: center;
     margin: 0 auto 20px;
-}
-
-.important-block p {
-    font-weight: bold;
+    border: 1px solid #020202;
 }
 
 footer {
@@ -147,4 +126,20 @@ footer {
     background-color: #ffffff;
     border-radius: 12px;
     color: #555;
+    border: 1px solid #020202;
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    body { padding: 15px 10px; }
+    h1 { font-size: 26px; }
+    img { height: 200px; }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 22px; padding: 15px; }
+    nav { flex-direction: column; gap: 10px; }
+    nav a { text-align: center; }
+    .interests, .photos { max-width: 100%; }
+    img { height: 220px; }
 }
