@@ -45,6 +45,7 @@ nav a {
   border-radius: 20px;
   font-weight: bold;
   border: 1px solid #020202;
+  transition: background-color 200ms ease, transform 150ms ease, box-shadow 200ms ease;
 }
 
 nav a:hover,
@@ -71,6 +72,8 @@ aside {
     border-radius: 10px;
     text-align: center;
     margin: 0 auto 20px;
+  transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+
 }
 
 section.top-3 {
@@ -90,6 +93,7 @@ section.top-3 {
     height: auto;
     display: block;
     box-sizing: border-box;
+    transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
 }
 
 .top-3 audio {
@@ -105,6 +109,8 @@ footer {
   background-color: #ffffff;
   border-radius: 12px;
   color: #555;
+
+  transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
 }
 
 @media (max-width: 768px) {
@@ -176,4 +182,48 @@ footer {
     audio {
         width: 100%;
     }
+}
+
+@media (hover: hover) {
+    nav a:hover {
+        transform: scale(1.03);
+        background-color: #00aeda;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        position: relative;
+    }
+
+    .top-3:hover {
+    transform: translateY(-10px);
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    border-color: #00aeda;
+  }
+
+    .song:hover img {
+    transform: scale(1.03);
+  }
+
+  footer:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    border-color: #00aeda;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav a,
+  .top-3,
+  .song img,
+  footer {
+    transition: none;
+  }
+  
+  nav a:hover,
+  nav a.active,
+  .top-3:hover,
+  .song:hover img,
+  footer:hover {
+    transform: none;
+  }
 }

@@ -31,6 +31,8 @@ h2 {
     text-align: center;
     background-color: #fff;
     border-radius: 15px;
+
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
 }
 
 h3 {
@@ -61,6 +63,7 @@ nav a {
     border-radius: 20px;
     font-weight: bold;
     border: 1px solid #020202;
+    transition: background-color 200ms ease, transform 150ms ease, box-shadow 200ms ease;
 }
 
 nav a:hover,
@@ -96,6 +99,8 @@ img {
     background-color: #fff;
     border-radius: 10px;
     text-align: center;
+
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
 }
 
 .interests p {
@@ -121,6 +126,8 @@ img {
     background-color: #fff;
     border-radius: 10px;
     text-align: center;
+
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
 }
 
 .photos p {
@@ -136,6 +143,8 @@ img {
     border-radius: 10px;
     text-align: center;
     margin: 0 auto 20px;
+
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
 }
 
 .important-block p {
@@ -148,6 +157,8 @@ footer {
     background-color: #ffffff;
     border-radius: 12px;
     color: #555;
+
+    transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
 }
 
 @media (max-width: 768px) {
@@ -227,4 +238,42 @@ footer {
     }
 
 
+}
+
+@media (hover: hover) {
+    nav a:hover {
+        transform: scale(1.03);
+        background-color: #00aeda;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        position: relative;
+    }
+
+    h2:hover, .interests:hover, .photos:hover, .important-block:hover, footer:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    border-color: #00aeda;
+  }
+
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav a,
+  h2,
+  .interests,
+  .photos,
+  .important-block,
+  footer {
+    transition: none;
+  }
+  
+  nav a:hover, 
+  h2:hover, 
+  .interests:hover, 
+  .photos:hover, 
+  .important-block:hover,
+  footer:hover {
+    transform: none;
+  }
 }

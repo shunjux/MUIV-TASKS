@@ -83,6 +83,25 @@ footer {
   margin-top: 940px;
 }
 
+@media (hover: hover) {
+    .button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        position: relative;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+  
+  .button:hover {
+    transform: none;
+  }
+}
+
 @media (max-width: 768px) {
     .auth-section {
         flex-wrap: wrap;
